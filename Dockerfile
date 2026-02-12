@@ -2,9 +2,10 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-# Install system dependencies for OpenCV
+# Update package lists and install system dependencies
+# libgl1 is the modern replacement for libgl1-mesa-glx on Debian Bookworm
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    libgl1-mesa-glx \
+    libgl1 \
     libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
 
@@ -12,7 +13,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY requirements-server.txt .
 
 # Install Python dependencies
-# We use the CPU version of Torch to save slug size, but you can remove the extra-index-url for GPU if you have a GPU instance
+# We use the CPU version of Torch to save slug size
 RUN pip install --no-cache-dir -r requirements-server.txt --extra-index-url https://download.pytorch.org/whl/cpu
 
 # Copy the rest of the application
