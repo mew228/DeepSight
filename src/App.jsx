@@ -2,7 +2,7 @@ import { useState, useRef } from 'react';
 import { Upload, X, Check, Loader2, Play, Image as ImageIcon, Box } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const API_URL = import.meta.env.PROD ? "/api" : "http://localhost:8000";
+const API_URL = import.meta.env.PROD ? "https://deepsight-0me5.onrender.com" : "http://localhost:8000";
 
 function App() {
   const [file, setFile] = useState(null);
