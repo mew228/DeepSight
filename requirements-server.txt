@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+python-multipart
+pillow
+numpy
+ultralytics
+torch==2.1.2+cpu
+torchvision==0.16.2+cpu

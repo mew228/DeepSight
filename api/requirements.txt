@@ -1,0 +1,7 @@
+fastapi
+ultralytics
+python-multipart
+pillow
+numpy
+# Note: Torch is heavy and might exceed Vercel limits.
+# For full reliability, use the DEPLOY_TO_RENDER.md guide.
