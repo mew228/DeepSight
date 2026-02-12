@@ -2,8 +2,6 @@
 
 **DeepSight** is a research-grade object detection platform designed for rapid inference and high accuracy. Powered by **YOLOv8** and a sleek **React + Tailwind** frontend.
 
-## 🚀 Live Demo
-Access the live application here: [https://DeepSight228.vercel.app](https://DeepSight228.vercel.app)
 
 ## ✨ Features
 *   **Real-Time Inference**: Powered by Ultralytics YOLOv8 models.
